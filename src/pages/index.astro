@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
+import BlankReelVisual from '../components/BlankReelVisual.astro';
+import BeatsFlowVisual from '../components/BeatsFlowVisual.astro';
+import RepoFlowsVisual from '../components/RepoFlowsVisual.astro';
 import HaltCoreVisual from '../components/HaltCoreVisual.astro';
 import ParseCoreVisual from '../components/ParseCoreVisual.astro';
-import PresentellaVisual from '../components/PresentellaVisual.astro';
+import KnightVisionVisual from '../components/KnightVisionVisual.astro';
 ---
 
-<Layout title="Developer Studio">
+<Layout>
   <!-- Immersive Hero Section (100vh) -->
   <section class="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden select-none">
     <!-- Centerpiece Banner Image Frame -->
@@ -15,6 +18,8 @@ import PresentellaVisual from '../components/PresentellaVisual.astro';
         src="/emir_gumus_banner.jpg" 
         alt="Emir Gümüş Banner" 
         id="hero-banner"
+        loading="eager"
+        fetchpriority="high"
         class="max-w-full max-h-full object-contain parallax-image scale-[1.0]"
       />
     </div>
@@ -32,26 +37,98 @@ import PresentellaVisual from '../components/PresentellaVisual.astro';
   <section class="border-b border-zinc-900 bg-black py-32 px-6 sm:px-12" id="projects">
     <div class="mx-auto max-w-6xl space-y-48 featured-projects-container">
       
-      <!-- Project 1: Halt Core (Left Aligned, Visual Left, Content Right) -->
+      <!-- Project 1: BlankReel (Left Aligned, Visual Left, Content Right) -->
       <div class="mr-auto max-w-4xl w-full">
         <div class="featured-card group transition-all duration-300">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <!-- Visual Left -->
             <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper reveal-item">
-              <HaltCoreVisual />
+              <BlankReelVisual />
             </div>
             
             <!-- Content Right -->
             <div class="lg:col-span-7 space-y-6 reveal-item reveal-delay-200">
-              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">Halt Core</h3>
+              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">BlankReel</h3>
               
               <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
-                Zero-trust execution guardrail and sub-millisecond middleware SDK for autonomous AI agents. Intercepts and blocks dangerous shell commands, Python AST sandbox escapes, and malicious file payloads before execution. Powered by local rules and optional Phi-4 intent validation. Local, private, and air-gapped.
+                The API-first programmatic video generation engine. Connect n8n, Make, or your code—send dynamic scenes, get production-ready videos. Powered by kinetic typography, dynamic scene transitions, and cloud-scale video rendering pipelines.
               </p>
               
               <div class="pt-2">
                 <a 
-                  href="https://github.com/emirgms-creator/halt-core" 
+                  href="https://blankreel.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
+                >
+                  Website &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: BeatsFlow (Right Aligned, Content Left, Visual Right) -->
+      <div class="ml-auto max-w-4xl w-full">
+        <div class="featured-card group transition-all duration-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <!-- Content Left (Order 2 on mobile, Order 1 on desktop) -->
+            <div class="lg:col-span-7 space-y-6 order-2 lg:order-1 reveal-item">
+              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">BeatsFlow</h3>
+              
+              <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
+                Next-gen AI music workstation and 4-track stem studio. Generates studio-grade instrumental beats, clones acoustic reference styles, and isolates multitrack stems (Drums, Bass, Melody, FX) ready for FL Studio, Ableton Live, and Logic Pro.
+              </p>
+              
+              <div class="pt-2">
+                <a 
+                  href="https://www.getbeatsflow.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
+                >
+                  Website &rarr;
+                </a>
+              </div>
+            </div>
+            
+            <!-- Visual Right (Order 1 on mobile, Order 2 on desktop) -->
+            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper order-1 lg:order-2 reveal-item reveal-delay-200">
+              <BeatsFlowVisual />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: RepoFlows (Left Aligned, Visual Left, Content Right) -->
+      <div class="mr-auto max-w-4xl w-full">
+        <div class="featured-card group transition-all duration-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <!-- Visual Left -->
+            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper reveal-item">
+              <RepoFlowsVisual />
+            </div>
+            
+            <!-- Content Right -->
+            <div class="lg:col-span-7 space-y-6 reveal-item reveal-delay-200">
+              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">RepoFlows</h3>
+              
+              <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
+                Instant runtime architecture visualizer for any GitHub repository. Transforms complex codebases into interactive, animated system topology maps using AI and the Archify vector rendering engine.
+              </p>
+              
+              <div class="flex items-center gap-4 pt-2">
+                <a 
+                  href="https://www.repoflows.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
+                >
+                  Website &rarr;
+                </a>
+                <a 
+                  href="https://github.com/emirgms-creator/repoflows" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
@@ -64,16 +141,61 @@ import PresentellaVisual from '../components/PresentellaVisual.astro';
         </div>
       </div>
 
-      <!-- Project 2: Parse Core (Right Aligned, Content Left, Visual Right) -->
+      <!-- Project 4: Halt Core (Right Aligned, Content Left, Visual Right) -->
       <div class="ml-auto max-w-4xl w-full">
         <div class="featured-card group transition-all duration-300">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <!-- Content Left (Order 2 on mobile, Order 1 on desktop) -->
             <div class="lg:col-span-7 space-y-6 order-2 lg:order-1 reveal-item">
+              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">Halt Core</h3>
+              
+              <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
+                Zero-trust execution guardrail and sub-millisecond middleware SDK for autonomous AI agents. Intercepts and blocks dangerous shell commands, Python AST sandbox escapes, and malicious file payloads before execution. Local, private, and air-gapped.
+              </p>
+              
+              <div class="flex items-center gap-4 pt-2">
+                <a 
+                  href="https://github.com/emirgms-creator/halt-core" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
+                >
+                  GitHub &rarr;
+                </a>
+                <a 
+                  href="https://pypi.org/project/halt-core/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
+                >
+                  PyPI &rarr;
+                </a>
+              </div>
+            </div>
+            
+            <!-- Visual Right (Order 1 on mobile, Order 2 on desktop) -->
+            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper order-1 lg:order-2 reveal-item reveal-delay-200">
+              <HaltCoreVisual />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Parse Core (Left Aligned, Visual Left, Content Right) -->
+      <div class="mr-auto max-w-4xl w-full">
+        <div class="featured-card group transition-all duration-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <!-- Visual Left -->
+            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper reveal-item">
+              <ParseCoreVisual />
+            </div>
+            
+            <!-- Content Right -->
+            <div class="lg:col-span-7 space-y-6 reveal-item reveal-delay-200">
               <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">Parse Core</h3>
               
               <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
-                Ultra-fast, privacy-first local data ingestion pipeline in Go. Extracts text from PDF, DOCX, CSV, TXT & MD, chunks it semantically with sliding overlap, and structures it into JSON using local LLMs (Ollama/Phi-4). Safe, CGO-free, and 100% air-gapped.
+                Ultra-fast, privacy-first local data ingestion pipeline in Go. Extracts text from PDF, DOCX, CSV, TXT, MD, and web pages, chunks it semantically with sliding overlap, and structures it into JSON using local LLMs (Ollama/Phi-4). Safe, CGO-free, and 100% air-gapped.
               </p>
               
               <div class="pt-2">
@@ -87,42 +209,37 @@ import PresentellaVisual from '../components/PresentellaVisual.astro';
                 </a>
               </div>
             </div>
-            
-            <!-- Visual Right (Order 1 on mobile, Order 2 on desktop) -->
-            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper order-1 lg:order-2 reveal-item reveal-delay-200">
-              <ParseCoreVisual />
-            </div>
           </div>
         </div>
       </div>
-
-      <!-- Project 3: Presentella (Left Aligned, Visual Left, Content Right) -->
-      <div class="mr-auto max-w-4xl w-full">
+      
+      <!-- Project 6: KnightVision (Right Aligned, Content Left, Visual Right) -->
+      <div class="ml-auto max-w-4xl w-full">
         <div class="featured-card group transition-all duration-300">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            <!-- Visual Left -->
-            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper reveal-item">
-              <PresentellaVisual />
-            </div>
-            
-            <!-- Content Right -->
-            <div class="lg:col-span-7 space-y-6 reveal-item reveal-delay-200">
-              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">Presentella</h3>
+            <!-- Content Left (Order 2 on mobile, Order 1 on desktop) -->
+            <div class="lg:col-span-7 space-y-6 order-2 lg:order-1 reveal-item">
+              <h3 class="font-mono text-2xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">KnightVision</h3>
               
               <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
-                Presentella turns any academic topic into structured, age-appropriate lesson decks and quizzes in seconds. Tailored to specific grade levels from middle school to university, it automatically generates curriculum-aligned content and custom visuals for a complete learning experience.
+                A minimalist, real-time chess board perception HUD and Stockfish AI companion built with Chrome Manifest V3 and WebAssembly. Runs offline in Chrome's native Side Panel with zero DOM injection.
               </p>
               
               <div class="pt-2">
                 <a 
-                  href="https://www.presentella.com/" 
+                  href="https://github.com/emirgms-creator/KnightVision" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   class="inline-flex items-center justify-center rounded-none border border-zinc-800 bg-black hover:border-zinc-500 hover:text-white px-6 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition-colors duration-200 cursor-pointer"
                 >
-                  Website &rarr;
+                  GitHub &rarr;
                 </a>
               </div>
+            </div>
+            
+            <!-- Visual Right (Order 1 on mobile, Order 2 on desktop) -->
+            <div class="lg:col-span-5 overflow-hidden visual-scale-wrapper order-1 lg:order-2 reveal-item reveal-delay-200">
+              <KnightVisionVisual />
             </div>
           </div>
         </div>

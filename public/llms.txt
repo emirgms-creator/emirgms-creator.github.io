@@ -1,0 +1,43 @@
+# Emir Gümüş
+
+> Tech builder developing AI tools, creative platforms, and core systems.
+
+- **Website:** https://emirgms-creator.github.io
+- **GitHub:** https://github.com/emirgms-creator
+- **Contact:** emirgumus2010@gmail.com
+
+---
+
+## Projects
+
+### BlankReel
+- **Type:** Web Application / Video Generation Engine
+- **Website:** https://blankreel.com/
+- **Description:** An API-first programmatic video generation platform featuring timeline editing, dynamic scene generation, kinetic typography, and integrations for n8n, Make, and Python.
+
+### BeatsFlow
+- **Type:** Web Application / Audio Tool
+- **Website:** https://www.getbeatsflow.com/
+- **Description:** An AI music workstation that generates instrumental beats from prompts and separates audio into 4 isolated stems (Drums, Bass, Melody, FX) for digital audio workstations (FL Studio, Ableton, Logic Pro).
+
+### RepoFlows
+- **Type:** Web Application & Open Source Tool
+- **Website:** https://www.repoflows.com/
+- **GitHub:** https://github.com/emirgms-creator/repoflows
+- **Description:** An interactive architecture visualization tool that transforms GitHub repositories into animated system topology diagrams.
+
+### Halt Core
+- **Type:** Open Source Security SDK (Python)
+- **GitHub:** https://github.com/emirgms-creator/halt-core
+- **PyPI:** https://pypi.org/project/halt-core/
+- **Description:** A zero-trust execution guardrail and middleware SDK for autonomous AI agents. Uses Python AST (Abstract Syntax Tree) analysis and shell parsing to intercept and block unsafe commands and sandbox escapes locally.
+
+### Parse Core
+- **Type:** Open Source Data Pipeline (Go)
+- **GitHub:** https://github.com/emirgms-creator/parse-core
+- **Description:** An air-gapped, local data ingestion pipeline written in Go. Extracts text from PDF, DOCX, CSV, TXT, Markdown, and web pages, chunks data semantically, and outputs structured JSON via local LLMs.
+
+### KnightVision
+- **Type:** Chrome Extension (Manifest V3)
+- **GitHub:** https://github.com/emirgms-creator/KnightVision
+- **Description:** A chess board perception HUD and Stockfish companion built with Chrome Manifest V3 and WebAssembly, running offline in Chrome's native Side Panel with zero DOM injection.

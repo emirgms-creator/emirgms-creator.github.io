@@ -1,15 +1,15 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
 }
 
 const { 
   title, 
-  description = "Emir Gümüş - Developer Studio. Autonomous security, zero-trust middleware, and high-performance AI tools." 
+  description = "Emir Gümüş - Tech builder developing AI tools, creative platforms, and core systems." 
 } = Astro.props;
 
-const displayTitle = title ? `${title} | Emir Gümüş` : "Emir Gümüş | Developer Studio";
+const displayTitle = title ? `${title} | Emir Gümüş` : "Emir Gümüş";
 
 import '../styles/global.css';
 ---
@@ -27,7 +27,7 @@ import '../styles/global.css';
     <title>{displayTitle}</title>
     <meta name="title" content={displayTitle} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Emir Gümüş, portfolio, developer, autonomous security, zero-trust middleware, AI tools, Halt Core, Parse Core, Presentella, software engineer" />
+    <meta name="keywords" content="Emir Gümüş, portfolio, developer, BlankReel, BeatsFlow, RepoFlows, Halt Core, Parse Core, KnightVision, video automation, AI music, architecture visualizer, autonomous security, zero-trust middleware, WebAssembly, Stockfish, Go, Python, tech builder" />
     <meta name="author" content="Emir Gümüş" />
     <meta name="robots" content="index, follow" />
 
@@ -40,7 +40,7 @@ import '../styles/global.css';
     <meta property="og:title" content={displayTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL("/emir_gumus_banner.jpg", Astro.url)} />
-    <meta property="og:site_name" content="Emir Gümüş Portfolio" />
+    <meta property="og:site_name" content="Emir Gümüş" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -52,6 +52,39 @@ import '../styles/global.css';
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Sitemap & LLMs Discovery -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://emirgms-creator.github.io/#person",
+          "name": "Emir Gümüş",
+          "url": "https://emirgms-creator.github.io",
+          "jobTitle": "Tech Builder",
+          "sameAs": [
+            "https://github.com/emirgms-creator"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://emirgms-creator.github.io/#website",
+          "url": "https://emirgms-creator.github.io",
+          "name": "Emir Gümüş",
+          "description": description,
+          "publisher": {
+            "@id": "https://emirgms-creator.github.io/#person"
+          }
+        }
+      ]
+    })} />
   </head>
   <body class="relative min-h-screen bg-black text-white selection:bg-white selection:text-black antialiased">
     <!-- Main Content Container -->
