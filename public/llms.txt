@@ -39,5 +39,6 @@
 
 ### KnightVision
 - **Type:** Chrome Extension (Manifest V3)
+- **Chrome Web Store:** https://chromewebstore.google.com/detail/gljhmanagncggekjdpdgikmnncgjhfea
 - **GitHub:** https://github.com/emirgms-creator/KnightVision
 - **Description:** A chess board perception HUD and Stockfish companion built with Chrome Manifest V3 and WebAssembly, running offline in Chrome's native Side Panel with zero DOM injection.
